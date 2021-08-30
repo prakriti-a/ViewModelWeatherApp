@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">View Model Weather App</string>
+    <string name="location">Enter City</string>
+    <string name="get_weather">GET WEATHER INFO</string>
+    <string name="forecast">Forecast: </string>
+    <string name="temp">Temperature: </string>
+    <string name="min_temp">Min Temp: </string>
+    <string name="max_temp">Max Temp: </string>
+    <string name="humidity">Humidity: </string>
+    <string name="time">Last Updated At: </string>
+    <string name="city">City: </string>
+    <string name="country">Country: </string>
+    <string name="sunrise">Sunrise: </string>
+    <string name="sunset">Sunset: </string>
+    <string name="clear">Clear</string>
+    <string name="auto_city">cities</string>
+</resources>

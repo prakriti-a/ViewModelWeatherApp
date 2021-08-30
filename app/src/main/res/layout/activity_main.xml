@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/edtLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:autofillHints="@string/auto_city"
+        android:hint="@string/location"
+        android:inputType="text"
+        android:maxLength="50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnGetWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/get_weather"
+        android:textSize="@dimen/size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtLocation" />
+
+    <TextView
+        android:id="@+id/forecast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/forecast"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnGetWeather" />
+
+    <TextView
+        android:id="@+id/txtForecast"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/forecast"
+        app:layout_constraintTop_toBottomOf="@id/btnGetWeather" />
+
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/temp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/forecast" />
+
+    <TextView
+        android:id="@+id/txtTemp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/temp"
+        app:layout_constraintTop_toBottomOf="@id/txtForecast" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/time"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/temp" />
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/time"
+        app:layout_constraintTop_toBottomOf="@id/txtTemp" />
+
+    <TextView
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/city"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/time" />
+
+    <TextView
+        android:id="@+id/txtCity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/city"
+        app:layout_constraintTop_toBottomOf="@id/txtTime" />
+
+    <TextView
+        android:id="@+id/country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/country"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/city" />
+
+    <TextView
+        android:id="@+id/txtCountry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/country"
+        app:layout_constraintTop_toBottomOf="@id/txtCity" />
+
+    <TextView
+        android:id="@+id/humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/humidity"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/country" />
+
+    <TextView
+        android:id="@+id/txtHumidity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/humidity"
+        app:layout_constraintTop_toBottomOf="@id/txtCountry" />
+
+    <TextView
+        android:id="@+id/minTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/min_temp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/humidity" />
+
+    <TextView
+        android:id="@+id/txtMinTemp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/minTemp"
+        app:layout_constraintTop_toBottomOf="@id/txtHumidity" />
+
+    <TextView
+        android:id="@+id/maxTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/max_temp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/minTemp" />
+
+    <TextView
+        android:id="@+id/txtMaxTemp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/maxTemp"
+        app:layout_constraintTop_toBottomOf="@id/txtMinTemp" />
+
+    <TextView
+        android:id="@+id/sunrise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/sunrise"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/maxTemp" />
+
+    <TextView
+        android:id="@+id/txtSunrise"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sunrise"
+        app:layout_constraintTop_toBottomOf="@id/txtMaxTemp" />
+
+    <TextView
+        android:id="@+id/sunset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/sunset"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sunrise" />
+
+    <TextView
+        android:id="@+id/txtSunset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sunset"
+        app:layout_constraintTop_toBottomOf="@id/txtSunrise" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/clear"
+        android:textSize="@dimen/size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sunset" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
